@@ -4,7 +4,7 @@ FONT="MesloLGS NF"
 ICON_THEME=" "
 CURSOR_THEME=" "
 GTK_THEME="Sweet-Ambar-Blue-Dark-v40"
-WALLPAPPER=" "
+WALLPAPER="file:///usr/share/backgrounds/Dynamic_Wallpapers/Catalina.xml"
 
 # download the themes or i add a copy to the repo
 
@@ -17,6 +17,19 @@ gsettings set org.gnome.desktop.interface gtk-theme $GTK_THEME
 gsettings set org.gnome.desktop.interface icon-theme $ICON_THEME
 gsettings set org.gnome.shell.extensions.user-theme name $GTK_THEME
 gsettings set org.gnome.desktop.interface cursor-theme $CURSOR_THEME
+
+# install wallpaper
+
+mkdir -p /usr/share/backgrounds/Dynamic_Wallpapers
+mkdir -p /usr/share/gnome-background-properties/
+
+cp -r ../wallpaper/Catalina /usr/share/backgrounds/Dynamic_Wallpapers/
+cp ../wallpaper/Catalina.xml /usr/share/backgrounds/Dynamic_Wallpapers/
+cp ../wallpaper/CatalinaMain.xml /usr/share/gnome-background-properties/Catalina.xml
+
+# set background 
+gsettings set org.gnome.desktop.background picture-uri $WALLPAPER
+gsettings set org.gnome.desktop.background picture-uri-dark $WALLPAPER
 
 #install some extensions
 gnome-extensions install dash-to-dock 
