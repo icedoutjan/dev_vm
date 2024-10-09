@@ -1,10 +1,8 @@
 #alias for colors white grc
 alias ifconfig='grc ifconfig'
 alias ping='grc ping'
-alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
-alias vsc='/Applications/Visual\ Studio\ Code-2.app/Contents/MacOS/Electron'
+alias ip='grc ip'
 
-source ~/.local/share/icons-in-terminal/icons_bash.sh
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
