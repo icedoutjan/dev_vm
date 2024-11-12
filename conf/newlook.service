@@ -1,0 +1,12 @@
+[Unit]
+Description=Wallpaper Changer Service
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=$HOME/.local/bin/newlook
+Restart=always
+
+[Install]
+WantedBy=default.target
+
