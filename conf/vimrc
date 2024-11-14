@@ -1,5 +1,14 @@
+"call plug#begin()
+
+"Plug 'sheerun/vim-polyglot'
+
+"call plug#end()
+
 set number
 syntax on
 set hlsearch
 set incsearch
+
+set tabstop=4
+set shiftwidth=4
 set expandtab
