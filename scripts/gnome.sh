@@ -19,13 +19,16 @@ gsettings set org.gnome.shell.extensions.user-theme name $GTK_THEME
 gsettings set org.gnome.desktop.interface cursor-theme $CURSOR_THEME
 
 # install wallpaper
+install_wallpaper () {
+        mkdir -p /usr/share/backgrounds/Dynamic_Wallpapers
+        mkdir -p /usr/share/gnome-background-properties/
 
-mkdir -p /usr/share/backgrounds/Dynamic_Wallpapers
-mkdir -p /usr/share/gnome-background-properties/
+        cp -r ../wallpaper/Catalina /usr/share/backgrounds/Dynamic_Wallpapers/
+        cp ../wallpaper/Catalina.xml /usr/share/backgrounds/Dynamic_Wallpapers/
+        cp ../wallpaper/CatalinaMain.xml /usr/share/gnome-background-properties/Catalina.xml
+}
 
-cp -r ../wallpaper/Catalina /usr/share/backgrounds/Dynamic_Wallpapers/
-cp ../wallpaper/Catalina.xml /usr/share/backgrounds/Dynamic_Wallpapers/
-cp ../wallpaper/CatalinaMain.xml /usr/share/gnome-background-properties/Catalina.xml
+sudo install_wallpaper
 
 # set background 
 gsettings set org.gnome.desktop.background picture-uri $WALLPAPER
