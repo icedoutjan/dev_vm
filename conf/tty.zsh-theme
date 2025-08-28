@@ -20,9 +20,12 @@ function afmagic_dashes {
   fi
 }
 
+ARCH_BLUE="%{$(echo -e '\e[38;2;23;147;209m')%}"
+ARCH_GREY="%{$(echo -e '\e[38;2;60;63;65m')%}"
+
 # primary prompt: dashed separator, directory and vcs info
-PS1="${FG[237]}\${(l.\$(afmagic_dashes)..-.)}%{$reset_color%}
-${FG[032]}% [%T] %~\$(git_prompt_info)\$(hg_prompt_info) ${FG[105]}%(!.#.»)%{$reset_color%} "
+PS1="${ARCH_BLUE}\${(l.\$(afmagic_dashes)..-.)}%{$reset_color%}
+${ARCH_GREY}% [%T] %~\$(git_prompt_info)\$(hg_prompt_info) ${ARCH_BLUE}%(!.#.»)%{$reset_color%} "
 PS2="%{$fg[red]%}\ %{$reset_color%}"
 
 # right prompt: return code, virtualenv and context (user@host)
